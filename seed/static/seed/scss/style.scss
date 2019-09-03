@@ -3118,6 +3118,29 @@ div.table_list_container.matching, div.table_list_container.matching_detail {
   }
 }
 
+#inventory-detail-table {
+  th {
+    background-color: #fff;
+    position: sticky;
+    z-index: 1;
+
+    // This is necessary for sticky headers, https://stackoverflow.com/a/45042852
+    &:after {
+      border-bottom: 2px solid darken($gray_lighter, 10%);
+      bottom: -2px;
+      content: '';
+      left: 0;
+      pointer-events: none;
+      position: absolute;
+      width: 100%;
+    }
+  }
+
+  tr:first-child th {
+    top: 0;
+  }
+}
+
 .no-click {
   pointer-events: none;
 }
