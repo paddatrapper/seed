@@ -45,7 +45,7 @@ services:
     volumes:
       - seed_media:/seed/media
     ports:
-      - "80:80"
+      - "8090:80"
     logging:
       options:
         max-size: 50m
